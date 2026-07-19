@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-cloud-sun-rain"></i>
+                <h1>Weather Dashboard</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button id="location-btn"><i class="fa-solid fa-crosshairs"></i></button>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="weather-grid">
+            <!-- Left Panel: Main City & Temp -->
+            <div class="card main-weather-card">
+                <h2 id="city-name">New Delhi</h2>
+                <p id="date-time">Monday, 10:30 AM</p>
+                <div class="temp-display">
+                    <span id="main-temp">28</span>°C
+                </div>
+                <p id="weather-desc">Clear Sky</p>
+                <img id="weather-icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon">
+            </div>
+
+            <!-- Right Panel: Grid of 6 Metrics -->
+            <div class="metrics-grid">
+                <div class="card metric-card">
+                    <i class="fa-solid fa-temperature-half icon-feels"></i>
+                    <h3>Feels Like</h3>
+                    <p><span id="feels-like">30</span>°C</p>
+                </div>
+                <div class="card metric-card">
+                    <i class="fa-solid fa-droplet icon-humidity"></i>
+                    <h3>Humidity</h3>
+                    <p><span id="humidity">55</span>%</p>
+                </div>
+                <div class="card metric-card">
+                    <i class="fa-solid fa-wind icon-wind"></i>
+                    <h3>Wind</h3>
+                    <p><span id="wind-speed">5</span> m/s</p>
+                </div>
+                <div class="card metric-card">
+                    <i class="fa-solid fa-eye icon-visibility"></i>
+                    <h3>Visibility</h3>
+                    <p><span id="visibility">10</span> km</p>
+                </div>
+                <div class="card metric-card">
+                    <i class="fa-solid fa-cloud icon-clouds"></i>
+                    <h3>Clouds</h3>
+                    <p><span id="clouds">20</span>%</p>
+                </div>
+                <div class="card metric-card">
+                    <i class="fa-solid fa-gauge-high icon-pressure"></i>
+                    <h3>Pressure</h3>
+                    <p><span id="pressure">1012</span> hPa</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sun Timings Section -->
+        <section class="sun-section">
+            <div class="card sun-card">
+                <i class="fa-solid fa-sun icon-sun"></i>
+                <div>
+                    <h3>Sunrise</h3>
+                    <p id="sunrise">06:12 AM</p>
+                </div>
+            </div>
+            <div class="card sun-card">
+                <i class="fa-solid fa-moon icon-moon"></i>
+                <div>
+                    <h3>Sunset</h3>
+                    <p id="sunset">06:45 PM</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forecast Placeholders (As per UI) -->
+        <section class="forecast-placeholder">
+            <h2>Next 24 Hours</h2>
+            <h2>7 Day Forecast</h2>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Professional Weather Dashboard</p>
+            <p>Made with <i class="fa-solid fa-heart" style="color: #ff4d4d;"></i> using HTML CSS JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

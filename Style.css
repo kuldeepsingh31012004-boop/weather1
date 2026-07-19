@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #172b4d;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1100px;
+    background-color: #1a365d;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Header & Search */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #fbd38d;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    background-color: #2d3748;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    color: white;
+    width: 250px;
+    font-size: 0.95rem;
+}
+
+.search-box input:focus {
+    outline: 2px solid #4299e1;
+}
+
+.search-box button {
+    background-color: #4299e1;
+    border: none;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search-box button:hover {
+    background-color: #3182ce;
+}
+
+/* Reusable Cards */
+.card {
+    background-color: #2b4c7e;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Weather Grid layout */
+.weather-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Left Main Card */
+.main-weather-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.main-weather-card h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.main-weather-card p {
+    color: #a0aec0;
+    margin-bottom: 20px;
+}
+
+.temp-display {
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#weather-desc {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: #e2e8f0;
+    margin-bottom: 10px;
+}
+
+#weather-icon {
+    width: 80px;
+    height: 80px;
+}
+
+/* Right Metrics Grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 550px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.metric-card i {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.icon-feels { color: #f6ad55; }
+.icon-humidity { color: #63b3ed; }
+.icon-wind { color: #4fd1c5; }
+.icon-visibility { color: #ecc94b; }
+.icon-clouds { color: #cbd5e0; }
+.icon-pressure { color: #f6e05e; }
+
+.metric-card h3 {
+    font-size: 0.9rem;
+    color: #cbd5e0;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.metric-card p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Sunrise & Sunset Section */
+.sun-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.sun-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 25px;
+}
+
+.sun-card i {
+    font-size: 2.5rem;
+}
+
+.icon-sun { color: #ecc94b; }
+.icon-moon { color: #f6e05e; }
+
+.sun-card h3 {
+    color: #cbd5e0;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.sun-card p {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Placeholders for Forecast text */
+.forecast-placeholder h2 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    color: #e2e8f0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #2b4c7e;
+    padding-top: 20px;
+    color: #a0aec0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
